@@ -1,0 +1,77 @@
+//GIT
+------------------------------------------------------------------------------------------------
+project=repository(repo) in git
+folder=working directoy
+staging: control what commits 
+commit: git's way of saving
+main branch = master branch
+
+------------------------------------------------------------------------------------------------
+workingTree --> stagingArea --> commit
+------------------------------------------------------------------------------------------------
+
+//First Command
+(Check whether git is installed properly)
+$git --version
+
+------------------------------------------------------------------------------------------------
+//GIT Configuration
+$git config -l                                      //configurtion details
+$git config --global user.name "username"
+$git config --global user.email "emailID"
+
+------------------------------------------------------------------------------------------------
+//Initialise Repository
+$git init                               //current directory
+
+------------------------------------------------------------------------------------------------
+touch fileanme.extension                //create a file
+------------------------------------------------------------------------------------------------
+//.gitignore
+touch .gitignore --addFiles--> /fileanme.extension
+                 --addFolder--> folder/
+------------------------------------------------------------------------------------------------
+//STATUS
+$git status
+
+------------------------------------------------------------------------------------------------
+//STAGING AREA
+
+//add files to staging area
+    $git add .                              //all files in the working directoy
+    $git add fileanme.extension             //particular file
+
+//remove files from staging area
+    $git rm filename.extension              //remove and delete file
+    $git rm --cached filename.extension     //remove from git repo only
+------------------------------------------------------------------------------------------------
+//reset (restore staged changes)
+    $git reset                              //reset staging area to last commit(unstage the file)
+    $git reset filename                     //reset file to last commit
+    $git reset --hard                       //reset staging area and working tree to last commit
+    $git reset --soft                       //undo last commit but keep code changes
+    $git reset --hard commit-ID             //reset staging area and working tree to given commit
+------------------------------------------------------------------------------------------------
+//COMMIT
+
+$git commit -m 'commit message'             //commit changes
+$git commit -a -m 'commit message'          //commit without staging
+$git commit --amend                         //add to last commit without generating new commit
+------------------------------------------------------------------------------------------------
+//DIFF
+$git diff                       //compare working tree with staging area
+$git diff --staged              //compare staging area with last commit
+//or
+$git diff --cached              //compare staging area with last commit
+------------------------------------------------------------------------------------------------
+//REMOTE REPOSITORY
+git remote add origin				//connect remote repo to loacal repo
+git push -u origin master			//push to remote branch
+git clone url					//clone repo to machine
+
+//BRANCH
+git branch newBranchName			//create a new branch
+git checkout newBranchName			//checkout to new branch
+git checkout -b newBranchName			//create and checkout to new branch
+
+git merge newBranchName				//merge current branch with new branch
