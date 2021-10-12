@@ -6,5 +6,5 @@ It basically works on two concepts
 hdfs : contains the secondary node and data node 
 
 Yarn(Yet Another Resource Negotiator) : it process the data and then its fxn reduce () helps in map reducing 
-1. Capacity: Hadoop stores large volume
-2. Speed: Hadoop stores and retrieves data fasters of data.
+ Capacity: Hadoop stores large volume
+ Speed: Hadoop stores and retrieves data fasters of data.
