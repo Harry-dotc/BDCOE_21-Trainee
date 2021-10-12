@@ -1,0 +1,25 @@
+
+Data-Any usefull information.
+Type
+*)Structured
+*)Semi Structured.
+*)Un Structured.
+
+
+Big Data
+
+1) Refers to the dealing  of enormous data. 
+2) Data grater than peta bytes and so.
+
+5-V's of BIG DATA.
+1) VELOCITY- Speed at which the files are transmitting .
+2) VOLUME- Chunk of data which is travelling at a given speed.
+3) VALUE- Value of  data the files are having.
+4) VARASITY- Loss of data caused during transmitation.
+5) VARIETY- Different types.
+
+...
+
+
+
+
