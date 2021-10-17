@@ -26,31 +26,3 @@ Big Data Analytics(making out useful inferences, decrypting):
 	3.Making out Inferences
 
 	Uses: Ad customisation, User stats.
-
-
-
-Hadoop Architecture:
-	1.Map Reduce: Based on YARN, Distributed nature and Parallel processing. Map -> Reduce
-	2.HDFS: Hadoop Distributed File System, divison of files into multiple parts(based on GFS), make replicas.
-	3.YARN Framework: Yet Another Resource Negotiator, job scheduling(priority, dependency etc.) and resource management provide manage and maintain resources
-	4.Common Utilities: Java libraries(files and scripts) required by other hadoop modules to work
-
-kandane's algorithm
-
-1. Map reduce: YARN Based.
-	a) Map(): takes a set of data and breaks it into tuples(key-value pairs) and sends these as input to reduce module.
-	b) Reduce(): combines the touples on the baisis of key and forms a set of tuples.
-	c) Master job tracker: resource management among slaves, task scheduling, monitoring the task.
-	d) Slave task tracker: execute the task, provide task status
-
-
-|I|--->map()----->
-|N|		  |reduce()|		|O|
-|P|--->map()----->	    ----->()--->|/|
-|U|		  |reduce()|		|P|
-|T|--->map()----->
-
-
-2.HDFS: Hadoop Distributed File System, the complete file is divided into blocks(64MB).
-	a) Name node(Master Node): Stores and manages metadata(data about data), data nodes. Maps blocks to data nodes. Instructs block replication deletion based on priority.
-	b) Data nodes: Actual data is stored in data nodes.

@@ -1,0 +1,104 @@
+Hadoop: Big Data tool
+-------
+
+Hadoop Architecture:
+	1.Map Reduce: Based on YARN, Distributed nature and Parallel processing. Map -> Reduce
+	2.HDFS: Hadoop Distributed File System, divison of files into multiple parts(based on GFS), make replicas.
+	3.YARN Framework: Yet Another Resource Negotiator, job scheduling(priority, dependency etc.) and resource management provide manage and maintain resources
+	4.Common Utilities: Java libraries(files and scripts) required by other hadoop modules to work
+
+
+1. Map reduce: YARN Based.
+	a) Map(): takes a set of data and breaks it into tuples(key-value pairs) and sends these as input to reduce module.
+	b) Reduce(): combines the touples on the baisis of key and forms a set of tuples.
+	c) Master job tracker: resource management among slaves, task scheduling, monitoring the task.
+	d) Slave task tracker: execute the task, provide task status
+
+
+|I|--->map()----->
+|N|               |reduce()|            |O|
+|P|--->map()----->          ----->()--->|/|
+|U|               |reduce()|            |P|
+|T|--->map()----->
+
+
+2.HDFS: Hadoop Distributed File System, the complete file is divided into blocks(64MB).
+	a) Name node(Master Node): Stores and manages metadata(data about data), data nodes. Maps blocks to data nodes. Instructs block replication deletion based on priority.
+	b) Data nodes: Actual data is stored in data nodes.
+
+
+|H|
+|D|----->|Name Node|----->(Data Nodes)
+|F|
+|S|
+
+
+How Hadoop Works
+
+Data----->|H|
+          |D|      |Map   |------>(Master)
+          |F|----->|Reduce|------>(Slaves)
+Prog.---->|S|
+
+Client gives the following input:
+	1.Location of input and output data
+	2.Job Specifications(Priority, Scheduling)
+
+-Master divides the job into smaller tasks and distributes them among slaves.
+-Slaves execute the tasks assigned to them by master and pereodically give status to the master.
+-As per the response by slaves master manages resources.
+-When 100% work is completed the output data is stored in data nodes(Output location given by client).
+-Client reads the data from specified blocks.
+
+Advantages of Hadoop:
+	-High Computing Power
+	-HDFS(based on GFS)
+	-Fault Tolerance
+	-Flexibility(in terms of data)
+	-Open Source
+	-Scalability
+
+Disadvantages of Hadoop:
+	-Master goes down processing stops
+	-Not fit for small data
+	-Security Concerns(data not encrypted)
+	-Programming model is restrictive
+	-Joins of multiple datasets is complex and slow
+
+
+Hadoop Ecosystem: 
+
+A platform/tool used to solve big data problems.
+Comprises of Hadoop components:
+	-HDFS
+	-YARN
+	-Map Reduce
+	-Apache Pig
+	-Apache Hive
+	-Mahout
+
+
+
+Apache Hive
+-----------
+
+-Open Source data warehouse system for querying and analysing large data set stored in Hadoop Files
+-Data summarisation, Query, Analysis
+-Uses HiveQL ie. HQL
+-Highly scalable
+
+
+| |             | |--->(Metastore)    |M|
+|U|             |H|                   |A|--->(Slaves)
+|S|   Submit    |I|     Converts      |S|
+|E|------------>|V|------------------>|T|
+|R| SQL Query   |E|  SQL to MapReduce |E|--->(Slaves)
+| |             | |                   |R|
+
+
+
+Apache Pig
+----------
+
+-Uses Pig latin
+-Requires JRE
