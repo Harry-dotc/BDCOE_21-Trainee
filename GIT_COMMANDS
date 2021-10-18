@@ -1,0 +1,102 @@
+Git Terminology
+////////////////////////////////////////
+project=repository(repo) 
+folder=working directoy
+staging area: control what commits 
+commit: way of saving
+main branch = master branch
+
+/////////////////////////////////////////////////////
+
+A new repo from scratch
+Create a directory to contain the project.
+Go into the new directory.
+Type git init.
+Write some code.
+Type git add to add the files.
+Type git commit -m" ".
+git remote add origin git@github.com:username/new_repo.
+git push -u origin master.
+
+///////////////////////////////////////////////////////
+
+Git Commands
+1.git config
+Usage: git config –global user.name “[name]”  
+Usage: git config –global user.email “[email address]”
+
+2.git init
+Usage: git init [repository name]
+
+3.git clone
+Usage: git clone [url]  
+
+4.git add
+Usage: git add [file] 
+
+5.git add *  
+Usage: This command adds one or more to the staging area.
+
+6.git commit
+Usage: git commit -m “[ Type in the commit message]”  
+git commit -a  
+This command commits any files you’ve added with the git add command and also commits any files you’ve changed since then.
+
+7.git diff
+Usage: git diff  
+This command shows the file differences which are not yet staged.
+
+8.git status
+Usage: git status  
+This command lists all the files that have to be committed.
+
+9.git rm
+Usage: git rm [file]  
+This command deletes the file from your working directory and stages the deletion.
+
+10.git log
+Usage: git log  
+This command is used to list the version history for the current branch.
+
+11.git show
+Usage: git show [commit]  
+This command shows the metadata and content changes of the specified commit.
+
+12.git tag
+Usage: git tag [commitID]  
+This command is used to give tags to the specified commit.
+
+13.git branch
+Usage: git branch [branch name]  
+This command creates a new branch.
+Usage: git branch -d [branch name]  
+This command deletes the feature branch.
+
+14.git checkout
+Usage: git checkout -b [branch name]  
+This command creates a new branch and also switches to it.
+
+15.git merge
+Usage: git merge [branch name]  
+This command merges the specified branch’s history into the current branch.
+
+16.git remote
+Usage: git remote add [variable name] [Remote Server Link]  
+This command is used to connect your local repository to the remote server.
+
+17.git push
+Usage: git push [variable name] master  
+This command sends the committed changes of master branch to your remote repository.
+git push –all [variable name]  
+This command pushes all branches to your remote repository.
+
+18.git pull
+Usage: git pull [Repository Link]  
+This command fetches and merges changes on the remote server to your working directory.
+
+
+20.git stash
+Usage: git stash pop  
+This command restores the most recently stashed files.
+
+///////////////////////////////////////////////////////////////////////////////////////
