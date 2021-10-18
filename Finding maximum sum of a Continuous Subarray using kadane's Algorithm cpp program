@@ -1,9 +1,9 @@
 Kadane’s Algorithm:
 Time complexity O(n)
 Explanation: 
-            Kadane’s algorithm look for all positive continuous segments of the one dimensional array and keep the sum stored in an variable (let say "current") . in each iteration
-            if we get positive sum , compare and put it to variable (let say "maximum") , if current gets negative assign current to zero.. after 'n' iterations we get the maximum
-            continuous subarray sum in "maximum" variable
+            Kadane’s algorithm look for all positive continuous segments of the one dimensional array and keep the sum stored in an variable (let say "current") . in each 
+            iteration if we get positive sum , compare and put it to variable (let say "maximum") , if current gets negative assign current to zero.. after 'n' iterations we 
+            get the maximum continuous subarray sum in "maximum" variable
 Sample CPP Code 
 
 
